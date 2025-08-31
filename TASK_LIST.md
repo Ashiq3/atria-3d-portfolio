@@ -3,10 +3,10 @@
 ## Phase 1: Project Setup & Initialization
 
 ### Repository Setup
-- [ ] Create private GitHub repository named "atria-3d-portfolio"
-- [ ] Initialize repository with README.md, .gitignore, and LICENSE files
+- [-] Create private GitHub repository named "atria-3d-portfolio"
+- [x] Initialize repository with README.md, .gitignore, and LICENSE files
 - [ ] Set up branch protection rules for main branch
-- [ ] Configure GitHub Actions for CI/CD pipeline
+- [x] Configure GitHub Actions for CI/CD pipeline
 - [ ] Set up repository secrets for deployment credentials
 - [ ] Create project board with columns: Backlog, Todo, In Progress, Review, Done
 - [ ] Add team members with appropriate permissions
