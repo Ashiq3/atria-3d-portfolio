@@ -7,11 +7,11 @@ This document outlines all tasks for the ATRIA 3D Portfolio project, organized b
 ### Repository Setup
 - [x] Create private GitHub repository named "atria-3d-portfolio"
 - [x] Initialize repository with README.md, .gitignore, and LICENSE files
-- [!] Set up branch protection rules for main branch *(Manual step - see docs/project/NEXT_STEPS.md)*
+- [x] Set up branch protection rules for main branch
 - [x] Configure GitHub Actions for CI/CD pipeline
-- [!] Set up repository secrets for deployment credentials *(Manual step - see docs/project/NEXT_STEPS.md)*
-- [!] Create project board with columns: Backlog, Todo, In Progress, Review, Done *(Manual step - see docs/project/NEXT_STEPS.md)*
-- [!] Add team members with appropriate permissions *(Manual step - see docs/project/NEXT_STEPS.md)*
+- [!] Set up repository secrets for deployment credentials *(Manual step - see SETUP_SECRETS.md)*
+- [!] Create project board with columns: Backlog, Todo, In Progress, Review, Done *(Manual step - see CREATE_PROJECT_BOARD.md)*
+- [!] Add team members with appropriate permissions *(Manual step - see ADD_TEAM_MEMBERS.md)*
 
 Legend:
 - [ ] Task not started
@@ -103,4 +103,4 @@ Legend:
 
 ---
 
-*Note: Tasks marked with (!) require manual intervention and cannot be automated. See docs/project/NEXT_STEPS.md for detailed instructions.*
+*Note: Tasks marked with (!) require manual intervention and cannot be automated. See the respective documentation files for detailed instructions.*
