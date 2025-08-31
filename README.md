@@ -41,3 +41,36 @@ npm run dev
 ```bash
 npm run build
 npm run preview
+```
+
+## GitHub Repository Setup
+
+To set up the GitHub repository, you can use the provided scripts:
+
+### Windows:
+```bash
+scripts\setup-github.bat
+```
+
+### macOS/Linux:
+```bash
+chmod +x scripts/setup-github.sh
+./scripts/setup-github.sh
+```
+
+Alternatively, you can manually create a private repository named "atria-3d-portfolio" on GitHub and follow these steps:
+
+1. Create a new private repository on GitHub
+2. Add the remote origin:
+   ```bash
+   git remote add origin https://github.com/your-username/atria-3d-portfolio.git
+   ```
+3. Push the code:
+   ```bash
+   git push -u origin main
+   ```
+
+After setting up the repository, configure the following:
+- Branch protection rules for the main branch
+- Repository secrets for AWS deployment
+- GitHub project board for task tracking
