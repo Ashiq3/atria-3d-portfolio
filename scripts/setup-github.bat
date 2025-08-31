@@ -24,6 +24,8 @@ if not exist "atria-3d-portfolio" (
 
 echo Pushing code to GitHub...
 git push -u origin main
+echo.
+echo Repository setup complete! The local branch has been renamed from 'master' to 'main'.
 
 echo Setting up branch protection rules...
 gh api ^

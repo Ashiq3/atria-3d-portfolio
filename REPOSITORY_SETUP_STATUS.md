@@ -20,6 +20,7 @@ This document provides a summary of the current status of the GitHub repository 
 - ✅ Created deployment documentation in `docs/technical/DEPLOYMENT.md`
 - ✅ Added setup scripts for both Windows (`scripts/setup-github.bat`) and Unix-like systems (`scripts/setup-github.sh`)
 - ✅ Created repository setup summary in `docs/project/REPOSITORY_SETUP_SUMMARY.md`
+- ✅ Created manual setup instructions in `docs/project/GITHUB_MANUAL_SETUP.md`
 
 ### License and Configuration
 - ✅ Added MIT License file
@@ -27,40 +28,45 @@ This document provides a summary of the current status of the GitHub repository 
 
 ## Pending Tasks (Require Manual Intervention)
 
-### GitHub Repository Creation
-The following tasks require manual intervention as they involve creating resources on GitHub:
+The following tasks require manual intervention as they involve creating resources on GitHub. Detailed instructions are available in `docs/project/GITHUB_MANUAL_SETUP.md`:
 
-1. **Create private repository on GitHub**
-   - Log in to GitHub
-   - Create a new private repository named "atria-3d-portfolio"
-   - Add the remote origin to the local repository:
-     ```bash
-     git remote add origin https://github.com/your-username/atria-3d-portfolio.git
-     ```
-   - Push the code to GitHub:
-     ```bash
-     git push -u origin main
-     ```
+1. **Push repository to GitHub**
+   - Create a new private repository named "atria-3d-portfolio" on GitHub
+   - Add the remote origin to the local repository
+   - Push the code to GitHub
 
 2. **Set up branch protection rules**
-   - Go to repository Settings > Branches
-   - Add rule for "main" branch with appropriate protection settings
+   - Configure branch protection rules for the "main" branch
 
 3. **Configure repository secrets**
-   - Go to Settings > Secrets and variables > Actions
-   - Add the following secrets for AWS deployment:
-     - AWS_ACCESS_KEY_ID
-     - AWS_SECRET_ACCESS_KEY
-     - S3_BUCKET_NAME
-     - CLOUDFRONT_DISTRIBUTION_ID
+   - Set up repository secrets for AWS deployment credentials
 
 4. **Create project board**
-   - Go to Projects tab
-   - Create a new project board with columns: Backlog, Todo, In Progress, Review, Done
+   - Create a GitHub project board with columns: Backlog, Todo, In Progress, Review, Done
 
 5. **Add team members**
-   - Go to Settings > Collaborators and teams
-   - Add team members with appropriate permissions
+   - Add team members with appropriate permissions to the repository
+
+## Automated Setup Option
+
+If you have GitHub CLI installed, you can use the provided scripts to automate most of the setup:
+
+### Windows:
+```bash
+scripts\setup-github.bat
+```
+
+### macOS/Linux:
+```bash
+chmod +x scripts/setup-github.sh
+./scripts/setup-github.sh
+```
+
+Note: These scripts will help with repository creation and initial setup, but you'll still need to manually configure secrets, branch protection rules, project boards, and team members.
+
+## Manual Setup Option
+
+If GitHub CLI is not available, follow the detailed manual setup instructions in `docs/project/GITHUB_MANUAL_SETUP.md`.
 
 ## Automated Setup Option
 

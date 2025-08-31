@@ -26,6 +26,8 @@ fi
 # Push code to GitHub
 echo "Pushing code to GitHub..."
 git push -u origin main
+echo
+echo "Repository setup complete! The local branch has been renamed from 'master' to 'main'."
 
 # Set up branch protection rules
 echo "Setting up branch protection rules..."

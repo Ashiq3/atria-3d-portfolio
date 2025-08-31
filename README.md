@@ -45,22 +45,28 @@ npm run preview
 
 ## GitHub Repository Setup
 
-To set up the GitHub repository, you can use the provided scripts:
+To set up the GitHub repository, you have two options:
 
-### Windows:
+### Option 1: Automated Setup (Requires GitHub CLI)
+
+If you have GitHub CLI installed, you can use the provided scripts:
+
+#### Windows:
 ```bash
 scripts\setup-github.bat
 ```
 
-### macOS/Linux:
+#### macOS/Linux:
 ```bash
 chmod +x scripts/setup-github.sh
 ./scripts/setup-github.sh
 ```
 
-Alternatively, you can manually create a private repository named "atria-3d-portfolio" on GitHub and follow these steps:
+### Option 2: Manual Setup
 
-1. Create a new private repository on GitHub
+If GitHub CLI is not available, follow the detailed manual setup instructions in `docs/project/GITHUB_MANUAL_SETUP.md`:
+
+1. Create a new private repository named "atria-3d-portfolio" on GitHub
 2. Add the remote origin:
    ```bash
    git remote add origin https://github.com/your-username/atria-3d-portfolio.git
@@ -70,7 +76,17 @@ Alternatively, you can manually create a private repository named "atria-3d-port
    git push -u origin main
    ```
 
-After setting up the repository, configure the following:
-- Branch protection rules for the main branch
-- Repository secrets for AWS deployment
-- GitHub project board for task tracking
+## Post-Setup Configuration
+
+After setting up the repository, you need to configure the following through the GitHub web interface:
+
+1. Branch protection rules for the main branch
+2. Repository secrets for AWS deployment
+3. GitHub project board for task tracking
+4. Team member access permissions
+
+For detailed instructions on these steps, see `docs/project/GITHUB_MANUAL_SETUP.md`.
+
+## Repository Status
+
+The local repository is fully configured and ready to be pushed to GitHub. All necessary workflows, documentation, and scripts have been created. The repository needs to be created on GitHub and the local code needs to be pushed. The remaining tasks require manual intervention through the GitHub web interface.
