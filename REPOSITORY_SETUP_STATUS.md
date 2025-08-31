@@ -20,7 +20,7 @@ This document provides a summary of the current status of the GitHub repository 
 - ✅ Created deployment documentation in `docs/technical/DEPLOYMENT.md`
 - ✅ Added setup scripts for both Windows (`scripts/setup-github.bat`) and Unix-like systems (`scripts/setup-github.sh`)
 - ✅ Created repository setup summary in `docs/project/REPOSITORY_SETUP_SUMMARY.md`
-- ✅ Created manual setup instructions in `docs/project/GITHUB_MANUAL_SETUP.md`
+- ✅ Enhanced manual setup instructions in `docs/project/GITHUB_MANUAL_SETUP.md`
 
 ### License and Configuration
 - ✅ Added MIT License file
@@ -68,22 +68,9 @@ Note: These scripts will help with repository creation and initial setup, but yo
 
 If GitHub CLI is not available, follow the detailed manual setup instructions in `docs/project/GITHUB_MANUAL_SETUP.md`.
 
-## Automated Setup Option
+## Troubleshooting
 
-If you have GitHub CLI installed, you can use the provided scripts to automate most of the setup:
-
-### Windows:
-```bash
-scripts\setup-github.bat
-```
-
-### macOS/Linux:
-```bash
-chmod +x scripts/setup-github.sh
-./scripts/setup-github.sh
-```
-
-Note: These scripts will help with repository creation and initial setup, but you'll still need to manually configure secrets, branch protection rules, project boards, and team members.
+Refer to the troubleshooting section in `docs/project/GITHUB_MANUAL_SETUP.md` for solutions to common issues.
 
 ## Summary
 

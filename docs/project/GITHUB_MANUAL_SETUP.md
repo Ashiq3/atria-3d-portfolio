@@ -6,6 +6,7 @@ This document provides step-by-step instructions for manually setting up the Git
 
 1. A GitHub account
 2. Repository owner permissions
+3. Git installed and configured on your local machine
 
 ## Steps to Complete
 
@@ -15,9 +16,10 @@ This document provides step-by-step instructions for manually setting up the Git
 2. Go to https://github.com/new
 3. Enter the following details:
    - Repository name: `atria-3d-portfolio`
-   - Description: ATRIA 3D Portfolio Website
+   - Description: ATRIA 3D Portfolio Website - An immersive 3D portfolio showcasing creative works using WebGPU and Three.js
    - Visibility: Private
-4. Click "Create repository"
+4. **Do NOT initialize the repository with a README, .gitignore, or license** (we already have these locally)
+5. Click "Create repository"
 
 ### 2. Add Remote Origin to Local Repository
 
@@ -29,28 +31,24 @@ git remote add origin https://github.com/YOUR_USERNAME/atria-3d-portfolio.git
 
 Replace `YOUR_USERNAME` with your actual GitHub username.
 
+To verify the remote was added correctly:
+```bash
+git remote -v
+```
+
 ### 3. Push Code to GitHub
 
 Push the local code to the newly created repository:
 
 ```bash
-git push -u origin master
+git push -u origin main
 ```
 
-Note: The local branch is named "master". Consider renaming it to "main" for consistency with modern GitHub conventions.
+Note: The local branch is named "main". If for some reason your local branch is still named "master", you can either:
+1. Rename it locally first: `git branch -m master main`
+2. Or push to master: `git push -u origin master`
 
-### 4. Rename Branch to "main" (Recommended)
-
-To follow modern GitHub conventions, rename the branch from "master" to "main":
-
-1. On GitHub, go to your repository
-2. Click on the "master" branch dropdown
-3. Type "main" and select "Create branch: main from 'master'"
-4. Go to Settings > Branches
-5. Change the default branch to "main"
-6. Delete the "master" branch
-
-### 5. Set Up Branch Protection Rules
+### 4. Set Up Branch Protection Rules
 
 1. Go to your repository Settings
 2. Click on "Branches" in the left sidebar
@@ -62,7 +60,7 @@ To follow modern GitHub conventions, rename the branch from "master" to "main":
    - Include administrators (optional but recommended)
 6. Click "Create"
 
-### 6. Set Up Repository Secrets
+### 5. Set Up Repository Secrets
 
 1. Go to your repository Settings
 2. Click on "Secrets and variables" > "Actions" in the left sidebar
@@ -73,7 +71,7 @@ To follow modern GitHub conventions, rename the branch from "master" to "main":
    - Name: `S3_BUCKET_NAME`, Value: Your S3 bucket name
    - Name: `CLOUDFRONT_DISTRIBUTION_ID`, Value: Your CloudFront distribution ID
 
-### 7. Create Project Board
+### 6. Create Project Board
 
 1. Go to the "Projects" tab in your repository
 2. Click "New project"
@@ -88,7 +86,7 @@ To follow modern GitHub conventions, rename the branch from "master" to "main":
    - Done
 7. Customize the columns as needed
 
-### 8. Add Team Members
+### 7. Add Team Members
 
 1. Go to your repository Settings
 2. Click on "Collaborators and teams" in the left sidebar
@@ -115,3 +113,25 @@ After completing all steps, verify that:
 2. Set up automated deployments
 3. Configure webhooks for notifications
 4. Review and adjust repository settings as needed
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+1. **"Permission denied" when pushing code**
+   - Ensure you're using the correct credentials
+   - Try using SSH instead of HTTPS: `git remote set-url origin git@github.com:YOUR_USERNAME/atria-3d-portfolio.git`
+
+2. **Branch protection rules not working**
+   - Make sure you're targeting the correct branch name ("main")
+   - Verify that required status checks are properly configured in your GitHub Actions workflow
+
+3. **Repository secrets not accessible in workflows**
+   - Ensure secrets are named exactly as referenced in the workflow files
+   - Check that the workflow has the correct permissions to access secrets
+
+## Additional Resources
+
+- [GitHub Documentation](https://docs.github.com/)
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- [Repository Security Best Practices](https://docs.github.com/en/code-security)
