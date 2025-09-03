@@ -1,18 +1,9 @@
 import * as THREE from 'three';
-import WebGPU from 'three/addons/capabilities/WebGPU.js';
-import WebGPURenderer from 'three/addons/renderers/webgpu/WebGPURenderer.js';
 
-export async function createWebGPURenderer(): Promise<THREE.WebGPURenderer> {
-  if (WebGPU.isAvailable() === false) {
-    document.body.appendChild(WebGPU.getErrorMessage());
-    throw new Error('No WebGPU support');
-  }
-
-  const renderer = new WebGPURenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
-
-  return renderer;
+export async function createWebGPURenderer(): Promise<THREE.WebGLRenderer> {
+  // For now, fall back to WebGL renderer since WebGPU implementation is not provided
+  console.warn('WebGPU renderer not implemented, falling back to WebGL');
+  return createWebGLRenderer();
 }
 
 export function createWebGLRenderer(): THREE.WebGLRenderer {
